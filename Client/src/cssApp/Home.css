@@ -1,0 +1,148 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    padding: 50px;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+.home-content {
+    text-align: left;
+    color: #000;
+    max-width: 50%;
+    margin-right: 0%; /* Adjust this value to move content to the right */
+}
+
+.home-content h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.home-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.home-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-ride {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+.book-ride:hover {
+    background-color: #ff5a4f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.learn-more {
+    background-color: #ff8a47;
+    color: #fff;
+}
+
+.learn-more:hover {
+    background-color: #ff7432;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the features section */
+.features-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.features-container h2 {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.features-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.25rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .home-content {
+        max-width: 90%;
+        margin-left: 0; /* Remove left margin on small screens */
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+}

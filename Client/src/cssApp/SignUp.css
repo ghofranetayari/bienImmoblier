@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e3ebf0;
+    font-family: Arial, sans-serif;
+
+}
+
+.signUp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140vh;
+    background-color: #e3ebf0;
+}
+
+.signUp-box {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1000px; /* Augmenter la largeur pour accommoder plus de champs */
+    width: 100%;
+    font-family: Arial, sans-serif;
+
+}
+
+.signUp-left, .signUp-right {
+    padding: 30px;
+    flex: 1;
+}
+
+.signUp-left {
+    background-color: #f5f5f5;
+}
+
+.signUp-left h2 {
+    margin: 0 0 20px 0;
+}
+
+.signUp-left form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signUp-left input, .signUp-left textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Assurer que les champs prennent toute la largeur disponible */
+}
+
+.sign-up-button, .facebook-button, .login-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.sign-up-button {
+    background-color: #6e99b4;
+    color: white;
+}
+
+.sign-up-button:hover {
+    background-color: #5d88a1;
+}
+
+.facebook-button {
+    background-color: #7397e5;
+    color: white;
+}
+
+.facebook-button span {
+    font-weight: bold;
+}
+
+.facebook-button:hover {
+    background-color: #2e4374;
+}
+
+.signUp-right {
+    background-color: #6cb6e3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../images1/Login.png') no-repeat center center;
+    background-size: cover; /* Assurer que l'image de fond couvre toute la surface */
+}
+
+.signUp-right h2 {
+    margin: 0 0 10px 0;
+    color: white; /* Changer la couleur du texte pour être visible sur l'image */
+}
+
+.signUp-right p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; /* Changer la couleur du texte pour être visible sur l'image */
+}
+
+.login-button {
+    background-color: #3598d5;
+    color: white;
+}
+
+.login-button:hover {
+    background-color: #2a7fb0;
+}
+.sign-up-button:hover, .login-button:hover {
+    background: #0056b3;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.error-messages p {
+    color: red;
+    margin: 0.25rem 0;
+}
+.error-message {
+    color: red;
+}
