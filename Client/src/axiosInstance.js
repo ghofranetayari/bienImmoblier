@@ -2,6 +2,8 @@ import axios from 'axios';
 
 const instance = axios.create({
     baseURL: 'http://localhost:3001', // Remplacez par l'URL de votre API backend
+    withCredentials: true, // Pour gérer les cookies si nécessaire
+
 });
 
 instance.interceptors.response.use(

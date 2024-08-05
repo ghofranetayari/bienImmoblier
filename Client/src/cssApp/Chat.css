@@ -1,0 +1,26 @@
+/* Chat.css */
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-button {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.user-button:hover {
+    background-color: #e0e0e0;
+}
+
+.user-button:active {
+    background-color: #d0d0d0;
+}

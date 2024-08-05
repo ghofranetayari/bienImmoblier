@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar'; // Assurez-vous que le chemin est correct
+import Sidebar from './Sidebar'; // Chemin mis à jour
 
 const Home2 = () => {
   return (

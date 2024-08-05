@@ -3,6 +3,7 @@ import axios from '../axiosInstance';
 import { useNavigate } from 'react-router-dom';
 import '../cssApp/Login.css';
 import loginImage from '../images1/Login.png';
+import Navbar from './Navbar';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -15,13 +16,14 @@ const Login = () => {
         try {
             const response = await axios.post('/api/users/login', { email, motDePasse: password });
             console.log('Réponse du serveur :', response.data);
-            localStorage.setItem('accessToken', response.data.token);
-            localStorage.setItem('userInfo', JSON.stringify(response.data));
-            navigate('/home2'); // Assurez-vous que cette route existe dans votre configuration
+            localStorage.setItem('accessToken', response.data.token); // Assurez-vous que le token est stocké sous la clé 'accessToken'
+            localStorage.setItem('userInfo', JSON.stringify(response.data)); // Stockez les autres informations utilisateur
+            navigate('/home2'); // Rediriger vers la page home2 après la connexion
         } catch (error) {
             setError('Invalid email or password');
         }
     };
+    
 
     return (
         <div>

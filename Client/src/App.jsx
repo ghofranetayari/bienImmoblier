@@ -9,12 +9,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ProtectedRoute from './components/ProtectedRoute';
 import Profile from './components/Profile'; // Assuming Profile component is defined
 import Home2 from './components/Home2'; // Nouvelle page
+import Chat from './components/Chat'; // Nouvelle page
+import TicketForm from './components/Ticket/TicketForm'; // Assurez-vous que le chemin est correct
+import TicketList from './components/Ticket/TicketList';
 
+const currentUser = {
+  _id: 'currentUserId', // Remplacez par l'ID réel de l'utilisateur connecté
+  nom: 'Nom',
+  prenom: 'Prénom',
+};
 function App() {
   const userInfo = localStorage.getItem('userInfo');
 
   return (
-    <BrowserRouter>
+    
+    <>
+
       <Navbar /> {/* Utilisation de Navbar, suppression de NewNavbar */}
       <Routes>
         
@@ -24,8 +34,14 @@ function App() {
         <Route path='/signUp' element={<SignUp />}></Route>
         <Route path='/profile' element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         <Route path="/home2" element={<ProtectedRoute><Home2 /></ProtectedRoute>} />
+        <Route path='/chat' element={<ProtectedRoute><Chat currentUser={currentUser} /></ProtectedRoute>} />
+        <Route path='/ticket' element={<ProtectedRoute><TicketForm /></ProtectedRoute>} />
+        <Route path='/ticketList' element={<ProtectedRoute><TicketList/></ProtectedRoute>} />
+
+
       </Routes>
-    </BrowserRouter>
+          </>
+
   );
 }
 
